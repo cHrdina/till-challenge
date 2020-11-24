@@ -10,7 +10,8 @@ const MerchantComponent: React.FC<Merchant> = ({
   return (
     <div className="test-container">
       <h1>{name}</h1>
-      <ul>
+      <h3>{isTrading && 'Currently Trading'}</h3>
+      <ul aria-label="transactions list">
         {transactions.map((t) => (
           <li key={t.id}>
             <ul>
