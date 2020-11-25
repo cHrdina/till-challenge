@@ -1,5 +1,3 @@
-import React from 'react';
-
 const serverUrl = 'http://localhost:5000';
 
 export const get = async (endpoint: string) => {
