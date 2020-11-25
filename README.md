@@ -4,7 +4,7 @@
 - Typescript interfaces for Customer, Merchant and Transaction
 - API calls to dynamically grab merchant data from the [backend](https://github.com/cHrdina/till-payments-backend)
 
-# Usage
+## Usage
 
 With Yarn installed, clone this repo into a local directory and run the following code
 
