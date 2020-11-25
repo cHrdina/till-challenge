@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.status-green {
+  padding: 5px 10px;
+  color: rgb(26, 201, 41);
+  border: 1px solid;
+  border-radius: 25px;
+  width: max-content;
+  text-align: center;
+}
+.status-red {
+  color: red;
+}
+
+.picker-container {
+  margin: 20px 20px;
+}
+
+.picker-results {
+  padding: 20px;
+}
+
+.transaction-container {
+  margin: 20px 0;
+}
