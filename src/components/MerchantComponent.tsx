@@ -1,5 +1,6 @@
 import React from 'react';
-import { Merchant } from '../interfaces/merchant';
+import { Merchant } from '../interfaces/merchant.interface';
+import StatusTag from './StatusTag';
 
 const MerchantComponent: React.FC<Merchant> = ({
   id,
@@ -8,12 +9,15 @@ const MerchantComponent: React.FC<Merchant> = ({
   transactions,
 }) => {
   return (
-    <div className="test-container">
+    <div className="merchant-container">
       <h1>{name}</h1>
-      <h3>{isTrading && 'Currently Trading'}</h3>
+      {isTrading && <StatusTag active text="Currently Trading" />}
+      <label>
+        <h3>Transactions:</h3>
+      </label>
       <ul aria-label="transactions list">
         {transactions.map((t) => (
-          <li key={t.id}>
+          <li className="transaction-container" key={t.id}>
             <ul>
               {Object.entries(t).map(([key, value]) => (
                 <li key={key}>

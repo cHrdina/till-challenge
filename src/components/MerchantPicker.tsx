@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Merchant } from '../interfaces/merchant';
+import { Merchant } from '../interfaces/merchant.interface';
 import MerchantComponent from './MerchantComponent';
 
 type Props = {
@@ -31,11 +31,13 @@ const MerchantPicker: React.FC<Props> = ({ merchants }) => {
           onChange={(e) => handleSelect(e)}
         >
           {merchants.map((merchant) => (
-            <option value={merchant.id}>{merchant.name}</option>
+            <option key={merchant.id} value={merchant.id}>
+              {merchant.name}
+            </option>
           ))}
         </select>
       </div>
-      <div className="merchant-picker-results">
+      <div className="picker-results">
         {activeItem && <MerchantComponent {...activeItem} />}
       </div>
     </div>
